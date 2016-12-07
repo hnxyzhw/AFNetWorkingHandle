@@ -1,0 +1,45 @@
+//
+//  AFN-Prefix.pch
+//  AFNetWorkingHandle
+//
+//  Created by andson-zhw on 16/12/7.
+//  Copyright © 2016年 andson. All rights reserved.
+//
+
+#ifndef AFN_Prefix_pch
+#define AFN_Prefix_pch
+
+#import "AFNetworking.h"
+
+#import"UIKit+AFNetworking.h"
+#import "OpenUUID.h"
+
+#define APP_version  [[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleShortVersionString"]
+#define server_agent [NSString stringWithFormat:@"%@%@%@%@",@"www.ka360.com.cn/",APP_version,@"/Ios/0/0/0/4",@"/LOAN-360"]
+
+#define sts_identify [[OpenUUID sharedOpenUUID]getUDID]
+//判断系统
+#define isIOS7 ([[UIDevice currentDevice].systemVersion intValue]>=7?YES:NO)
+#define isIOS8 ([[UIDevice currentDevice].systemVersion intValue]>=8?YES:NO)
+#define isIOS9 ([[UIDevice currentDevice].systemVersion intValue]>=9?YES:NO)
+#define isIOS10 ([[UIDevice currentDevice].systemVersion intValue]>=10?YES:NO)
+
+
+
+//#define  Http_SERVER_URL @"http://www.tiantiandd.com:8888"
+//#define  SERVER_URL @"http://www.tiantiandd.com:8888"
+//#define  SHAERD_URL @"http://www.ka360.com.cn/portal/wap?"
+//
+//#define UMengCommunityAppkey @"55adfe2de0f55a720c003124"     // 生产环境社交Key
+//#define UMengMessageAppkey @"55adfe2de0f55a720c003124"       // 友盟消息推送生产环境Key
+//#define UMengKey @"58185a516e27a41a0e0028c9"
+
+#define UMengCommunityAppkey @"534e482f56240be796000de1"        // 测试环境社交Key
+#define UMengMessageAppkey @"534e482f56240be796000de1"          // 友盟消息推送测试环境Key
+#define UMengKey @"582294ea3eae25209e000ff5"
+
+#define  SHAERD_URL @"http://192.168.1.117/kb/portal/wap?"
+#define  SERVER_URL @"http://192.168.1.102/com.andson.loan"
+#define  Http_SERVER_URL @"http://192.168.1.102/com.andson.loan"
+
+#endif /* AFN_Prefix_pch */
